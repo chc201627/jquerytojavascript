@@ -76,6 +76,23 @@
     //  })
      
     console.log(actionList,dramaList,animationList);
+    // const  $home  = $('.home .list ');
+    const $actionContainer = document.querySelector('#action')
+    const $dramaContainer = document.getElementById('#drama')
+    const $animationContainer = document.getElementById('#animation')
+    const $modal = document.getElementById('modal');
+    const $overlay = document.getElementById('overlay');
+    const $hideModal = document.getElementById('hide-modal');
+    
+    const $featuringContainer = document.getElementById('featuring');
+    const $form = document.getElementById('form');
+    const $home = document.getElementById('home');
+   
+    
+    
+    const $modaleTitle = $modal.querySelector('h1')
+    const $modalImage = $modal.querySelector('img')
+    const $modalDescription = $modal.querySelector('p')
 
   })();
 
@@ -89,4 +106,3 @@
   //     .catch(error=> console.log('algo fallo')) 
 
 
-     
