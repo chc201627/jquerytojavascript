@@ -78,8 +78,28 @@
     console.log(actionList,dramaList,animationList);
     // const  $home  = $('.home .list ');
     const $actionContainer = document.querySelector('#action')
-    const $dramaContainer = document.getElementById('#drama')
-    const $animationContainer = document.getElementById('#animation')
+    const $dramaContainer = document.getElementById('drama')
+    const $animationContainer = document.getElementById('animation')
+    
+    const videoItemTemplate = (movie)=>{
+      return(
+        `<div class="primaryPlayListItem">
+        <div class="primaryPlayListItem-image">
+        <img stc="${movie.medium_cover_image}">
+        </div>
+        <h4 class ="primaryPlaylistItem-title">
+        ${movie.title}
+        </h4>
+        </div>`
+
+      )
+    }
+
+    actionList.data.movies.forEach((movie)=>{
+      const HTMLString = videoItemTemplate(movie)
+      console.log(HTMLString)
+    })
+    
     const $modal = document.getElementById('modal');
     const $overlay = document.getElementById('overlay');
     const $hideModal = document.getElementById('hide-modal');
@@ -93,6 +113,9 @@
     const $modaleTitle = $modal.querySelector('h1')
     const $modalImage = $modal.querySelector('img')
     const $modalDescription = $modal.querySelector('p')
+     
+ 
+    // console.log(videoItemTemplate('src/images/covers/bitcoin.jpg','title'))
 
   })();
 
